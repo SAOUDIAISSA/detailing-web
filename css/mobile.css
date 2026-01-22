@@ -1,0 +1,159 @@
+/* =========================================================
+MENU HAMBURGER — MOBILE & TABLET
+========================================================= */
+@media screen and (max-width: 1024px) {
+
+    /* Menu flottant semi-transparent */
+    .navigation {
+        position: fixed;
+        top: 100px;
+        left: 50%;
+        transform: translateX(-50%) translateY(-20px);
+        width: 85%;
+        max-width: 360px;
+        background: rgba(0, 0, 0, 0.85);
+        backdrop-filter: blur(10px);
+        border-radius: 18px;
+        padding: 25px 0;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.35s ease;
+        z-index: 999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Menu actif */
+    .navigation.active {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateX(-50%) translateY(0);
+    }
+
+    /* Liste verticale des liens */
+    .navigation ul {
+        flex-direction: column;
+        gap: 22px;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Liens du menu */
+    .navigation a {
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: var(--white);
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    /* Hover rouge */
+    .navigation a:hover,
+    .navigation a.active {
+        color: var(--red);
+    }
+
+    /* Hamburger visible en mobile/tablette */
+    .hamburger {
+        width: 40px;
+        height: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .hamburger span {
+        height: 3px;
+        width: 100%;
+        background: var(--white);
+        border-radius: 5px;
+        transition: all 0.4s ease;
+    }
+
+    /* Hamburger transformé en croix quand actif */
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 6px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -6px);
+    }
+
+    /* Masquer le bouton WhatsApp en mobile/tablette */
+    .btn-whatsapp {
+        display: none;
+    }
+}
+
+/* =========================================================
+FOOTER MOBILE
+========================================================= */
+@media screen and (max-width: 768px) {
+    .footer {
+        padding: 50px 20px; /* padding réduit pour mobile */
+    }
+
+    .footer-container {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .footer-columns {
+        display: flex;
+        flex-direction: column; /* empile les colonnes */
+        gap: 30px; /* espace entre chaque section */
+        margin: 30px 0;
+    }
+
+    .footer-column {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .footer-column h3 {
+        margin-bottom: 15px;
+        font-size: 1.2rem;
+        color: var(--red);
+    }
+
+    .footer-column p,
+    .footer-column a {
+        font-size: 0.95rem;
+        color: var(--white);
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .footer-column a:hover {
+        color: var(--red);
+    }
+
+    .socials {
+        justify-content: center; /* centre les icônes */
+        gap: 15px;
+    }
+
+    .socials a {
+        width: 40px;
+        height: 40px;
+    }
+
+    .socials img {
+        width: 22px;
+        height: 22px;
+    }
+
+    .footer-copyright {
+        font-size: 0.85rem;
+        margin-top: 20px;
+    }
+}

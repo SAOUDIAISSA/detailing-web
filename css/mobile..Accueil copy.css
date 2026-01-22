@@ -1,0 +1,81 @@
+/* =========================================================
+PAGE D’ACCUEIL — VERSION MOBILE
+========================================================= */
+@media screen and (max-width: 768px) {
+
+    /* ================= HERO ================= */
+    .hero {
+        min-height: 80vh; /* moins haut que PC */
+        background-position: center top; /* évite zoom excessif */
+        padding-top: 90px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+        line-height: 1.25;
+        margin-bottom: 15px;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        margin-bottom: 25px;
+    }
+
+    /* Boutons */
+    .btn-primary,
+    .btn-secondary {
+        display: block;
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto 12px;
+        padding: 14px 0;
+        font-size: 1rem;
+    }
+
+    /* ================= SERVICES ================= */
+    .services {
+        padding: 80px 15px;
+        min-height: auto;
+    }
+
+    .services h2 {
+        font-size: 1.9rem;
+    }
+
+    .section-subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 40px;
+    }
+
+    .service-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 340px;
+        border-radius: 20px;
+    }
+
+    .card img {
+        height: 180px;
+    }
+
+    .card h3 {
+        font-size: 1.2rem;
+        padding: 16px;
+    }
+
+    /* Désactiver hover inutile sur mobile */
+    .card:hover {
+        transform: none;
+        box-shadow: none;
+    }
+}
